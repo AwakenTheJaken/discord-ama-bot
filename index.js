@@ -26,4 +26,4 @@ client.on("message", function (message) {
     }
   }
 });
-client.login()
+client.login(process.env.TOKEN)
