@@ -12,7 +12,7 @@ client.on("message", function (message) {
   const args = commandBody.split(" ");
   const command = args.shift().toLowerCase();
   const userQuestion = message.content.split('!ama')
-  const questionAskedConfirmation = `${message.author.username} asked: ${userQuestion[1]}`
+  const questionAskedConfirmation = `${message.member.displayName} asked: ${userQuestion[1]}`
   if (command === 'ama') {
     if (userQuestion[1].length) {
       message.reply(`Your question has been received! It will automatically be removed in 30 seconds!`).then(botReply => {
